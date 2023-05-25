@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ tache.titre }}{% endblock %}
+
+{% block body %}
+<div class="container mt-4">
+    <h1>{{ tache.titre }}</h1>
+    <p>Description : {{ tache.description }}</p>
+    <p>Statut : {{ tache.statut }}</p>
+    <p>Date Limite : {{ tache.getDateLimite()|date('d/m/Y') }}</p>
+    <hr>
+    <a href="/taches" class="btn btn-dark">Retourner</a>
+</div>
+{% endblock %}
